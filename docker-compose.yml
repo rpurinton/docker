@@ -1,0 +1,12 @@
+version: '3'
+services:
+  lamp:
+    build: .
+    image: lamp
+    ports:
+      - "8080:80"
+    volumes:
+      - lamp_mysql_data:\/var\/lib\/mysql
+
+volumes:
+  lamp_mysql_data:
